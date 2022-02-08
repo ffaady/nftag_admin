@@ -10,7 +10,7 @@ import Breadcrumbs from "../../components/Common/Breadcrumb"
 import "./users.scss"
 
 const Users = () => {
-  //const history = useHistory();
+  const history = useHistory();
   const [userList, setUserData] = useState({});
 
   useEffect(() => {
