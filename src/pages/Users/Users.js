@@ -3,7 +3,7 @@ import MetaTags from 'react-meta-tags';
 import { MDBDataTable } from "mdbreact"
 import { Row, Col, Card, CardBody, CardTitle, CardSubtitle } from "reactstrap"
 import { post, get } from 'helpers/api_helper';
-import { useHistory } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 
 //Import Breadcrumb
 import Breadcrumbs from "../../components/Common/Breadcrumb"
