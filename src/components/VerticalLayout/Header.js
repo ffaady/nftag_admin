@@ -103,8 +103,7 @@ const Header = props => {
               <i className="mdi mdi-menu"></i>
             </button>
 
-            <div className="d-none d-sm-block">
-
+            {/* <div className="d-none d-sm-block">
               <Dropdown
                 isOpen={singlebtn}
                 toggle={() => setSinglebtn(!singlebtn)}
@@ -121,12 +120,11 @@ const Header = props => {
                   <DropdownItem>Separated link</DropdownItem>
                 </DropdownMenu>
               </Dropdown>
-
-            </div>
+            </div> */}
           </div>
 
           <div className="d-flex">
-            <form className="app-search d-none d-lg-block">
+            {/* <form className="app-search d-none d-lg-block">
               <div className="position-relative">
                 <input
                   type="text"
@@ -136,7 +134,6 @@ const Header = props => {
                 <span className="fa fa-search"></span>
               </div>
             </form>
-
             <Dropdown
               className="d-inline-block d-lg-none ms-2"
               onClick={() => {
@@ -162,11 +159,11 @@ const Header = props => {
                   </div>
                 </Form>
               </DropdownMenu>
-            </Dropdown>
+            </Dropdown> */}
 
-            <LanguageDropdown />
+            {/* <LanguageDropdown /> */}
 
-            <div className="dropdown d-none d-lg-inline-block">
+            {/* <div className="dropdown d-none d-lg-inline-block">
               <button
                 type="button"
                 onClick={() => {
@@ -177,12 +174,12 @@ const Header = props => {
               >
                 <i className="mdi mdi-fullscreen"></i>
               </button>
-            </div>
+            </div> */}
 
-            <NotificationDropdown />
+            {/* <NotificationDropdown /> */}
             <ProfileMenu />
 
-            <div
+            {/* <div
               onClick={() => {
                 props.showRightSidebarAction(!props.showRightSidebar)
               }}
@@ -194,7 +191,7 @@ const Header = props => {
               >
                 <i className="mdi mdi-cog-outline"></i>
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </header>

@@ -13,11 +13,15 @@ import ForgetPwd from "../pages/Authentication/ForgetPassword"
 // Dashboard
 import Dashboard from "../pages/Dashboard/index"
 
+import Users from "../pages/Users/Users";
+
 const userRoutes = [
   { path: "/dashboard", component: Dashboard },
 
   // // //profile
   { path: "/profile", component: UserProfile },
+
+  { path: "/users", component: Users },
 
   // this route should be at the end of all other routes
   { path: "/", exact: true, component: () => <Redirect to="/dashboard" /> },

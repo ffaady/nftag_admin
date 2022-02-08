@@ -48,7 +48,7 @@ const Login = props => {
   }
 
   const userInfo = () => {
-    post('getuserbytokenForWeb', null, { headers: { "Authorization": `Bearer ${localStorage.getItem('access_token')}` } })
+    post('GetUserDetailsForWeb', null, { headers: { "Authorization": `Bearer ${localStorage.getItem('access_token')}` } })
       .then((res) => {
         if (res.status == true) {
           localStorage.setItem("authUser", JSON.stringify(res.data))

@@ -5,7 +5,7 @@ import accessToken from "./jwt-token-access/accessToken"
 const token = accessToken
 
 //apply base url for axios
-const API_URL = "https://gigeconomy.yaze.live/web/"
+const API_URL = "https://nftagapi.yaze.live/web/"
 
 const axiosApi = axios.create({
   baseURL: API_URL,
