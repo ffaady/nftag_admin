@@ -27,9 +27,10 @@ const MarketPlace = () => {
         if (res.status == true) {
           let data = res.data.marketplace;
           data.forEach((e) => {
-            e.edit = <button className="btn btn-danger" onClick={() => toggleModal(true, e)}>Edit</button>
+            e.edit = <button className="btn btn-danger" onClick={() => toggleModal(true, e)}>Edit</button>;
+            e.view = <button className="btn btn-primary" onClick={() => gotoDetail(e)}>View</button>
           })
-          let tableData = {
+          let tableData = { 
             columns: [
               {
                 label: "ID",
@@ -55,6 +56,12 @@ const MarketPlace = () => {
                 field: "edit",
                 sort: "asc",
                 width: 50
+              },
+              {
+                label: "View",
+                field: "view",
+                sort: "asc",
+                width: 50
               }
 
             ],
@@ -63,6 +70,10 @@ const MarketPlace = () => {
           setMarketPlace(tableData);
         }
       })
+  }
+
+  const gotoDetail = (e)=>{
+    history.push('/collections/'+e.id);
   }
 
   const toggleModal = (sh = false, d = null) => {
