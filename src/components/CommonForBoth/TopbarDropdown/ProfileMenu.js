@@ -26,7 +26,6 @@ const ProfileMenu = props => {
   useEffect(() => {
     if (localStorage.getItem("authUser")) {
       let user = JSON.parse(localStorage.getItem("authUser"));
-      console.log(user)
       setusername(user.full_name);
       user.user_image !== undefined ?
       setUserImg(user.user_image): null

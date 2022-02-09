@@ -16,6 +16,8 @@ import Dashboard from "../pages/Dashboard/index"
 import Users from "../pages/Users/Users";
 import UsersProfile from "../pages/UserProfile/UserProfile";
 
+import MarketPlace from '../pages/MarketPlace/MarketPlace'
+
 const userRoutes = [
   { path: "/dashboard", component: Dashboard },
 
@@ -24,6 +26,8 @@ const userRoutes = [
   
   { path: "/users", component: Users },
   { path: "/user/:id", component: UsersProfile },
+
+  { path: "/marketplace", component: MarketPlace },
 
   // this route should be at the end of all other routes
   { path: "/", exact: true, component: () => <Redirect to="/dashboard" /> },

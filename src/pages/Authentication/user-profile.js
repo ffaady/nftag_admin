@@ -89,7 +89,7 @@ const UserProfile = props => {
                       <div className="text-muted">
                         <h5>{name}</h5>
                         <p className="mb-1">{email}</p>
-                        <p className="mb-0">Id no: #{idx}</p>
+                        {/* <p className="mb-0">Id no: #{idx}</p> */}
                       </div>
                     </div>
                   </div>
