@@ -109,7 +109,7 @@ const SidebarContent = props => {
 
             <li>
               <Link to="/marketplace" className=" waves-effect">
-                <i className="ti-user"></i>
+                <i className="ti-bar-chart"></i>
                 <span>{props.t("Market Place")}</span>
               </Link>
             </li>
