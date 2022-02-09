@@ -75,21 +75,23 @@ const Header = props => {
         <div className="navbar-header">
           <div className="d-flex">
             <div className="navbar-brand-box">
-              <Link to="/" className="logo logo-dark">
+              {/* <Link to="/" className="logo logo-dark">
                 <span className="logo-sm">
                   <img src={logosmImg} alt="" height="22" />
                 </span>
                 <span className="logo-lg">
                   <img src={logodarkImg} alt="" height="17" />
                 </span>
-              </Link>
+              </Link> */}
 
               <Link to="/" className="logo logo-light">
                 <span className="logo-sm">
-                  <img src={logosmImg} alt="" height="22" />
+                  {/* <img src={logosmImg} alt="" height="22" /> */}
+                  <b style={{'font-size':'15px', 'color':'#fff'}}>NFTAG</b>
                 </span>
                 <span className="logo-lg">
-                  <img src={logolightImg} alt="" height="18" />
+                  {/* <img src={logolightImg} alt="" height="18" /> */}
+                  <b style={{'font-size':'20px', 'color':'#fff'}}>NFTAG</b>
                 </span>
               </Link>
             </div>

@@ -8,7 +8,7 @@ const Footer = () => {
         <Container fluid={true}>
           <Row>
             <div className="col-12">
-              © {new Date().getFullYear()} Idevation  <span className="d-none d-sm-inline-block"> - Crafted with
+              © {new Date().getFullYear()} NFTAG  <span className="d-none d-sm-inline-block"> - Crafted with
               {" "}<i className="mdi mdi-heart text-danger"></i></span>
             </div>
           </Row>
