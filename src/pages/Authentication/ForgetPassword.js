@@ -24,13 +24,9 @@ const ForgetPasswordPage = props => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Forget Password | Veltrix - Responsive Bootstrap 5 Admin Dashboard</title>
+        <title>Forget Password | NFTAG</title>
       </MetaTags>
-      <div className="home-btn d-none d-sm-block">
-        <Link to="/" className="text-dark">
-          <i className="fas fa-home h2"></i>
-        </Link>
-      </div>
+      
       <div className="account-pages my-5 pt-5">
         <Container>
           <Row className="justify-content-center">
@@ -39,9 +35,9 @@ const ForgetPasswordPage = props => {
                 <div className="bg-primary">
                   <div className="text-primary text-center p-4">
                     <h5 className="text-white font-size-20 p-2">Forget Password</h5>
-                    <a href="index.html" className="logo logo-admin">
+                    {/* <a href="index.html" className="logo logo-admin">
                       <img src={logoSm} height="24" alt="logo" />
-                    </a>
+                    </a> */}
                   </div>
                 </div>
                 <CardBody className="p-4">
@@ -84,13 +80,6 @@ const ForgetPasswordPage = props => {
                   </AvForm>
                 </CardBody>
               </Card>
-              <div className="mt-5 text-center">
-                <p>Remember It ? <Link to="login" className="fw-medium text-primary"> Sign In here </Link> </p>
-                <p>
-                  © {new Date().getFullYear()} Veltrix. Crafted with{" "}
-                  <i className="mdi mdi-heart text-danger" /> by Themesbrand
-                </p>
-              </div>
             </Col>
           </Row>
         </Container>

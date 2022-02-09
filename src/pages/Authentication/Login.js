@@ -60,7 +60,7 @@ const Login = props => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Login | GIG Economy Admin Dashboard</title>
+        <title>Login | NFTAG</title>
       </MetaTags>
       <div className="home-btn d-none d-sm-block">
         {/* <Link to="/" className="text-dark">
@@ -80,11 +80,11 @@ const Login = props => {
                       Welcome Back !
                     </h5>
                     <p className="text-white-50">
-                      Sign in to continue to Veltrix.
+                      Sign in to continue to NFTAG.
                     </p>
-                    <Link to="/" className="logo logo-admin">
+                    {/* <Link to="/" className="logo logo-admin">
                       <img src={logoSm} height="24" alt="logo" />
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
 
