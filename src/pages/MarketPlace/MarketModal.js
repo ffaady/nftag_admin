@@ -26,13 +26,12 @@ const CategoryModal = ({ showHide, data, onToggle }) => {
     const handleSubmit = (errors, values) => {
         let a = {
             name: values.name,
-            status: values.status == 'Active' ? 1 : values.status == 'Deactived' ? 2 : 3,
+            status: values.status == 'Approved' ? 1 : values.status == 'Pending' ? 2 : 3,
             id: market.id,
         };
 
         post('UpdateMarket', a, { headers: { "Authorization": `Bearer ${localStorage.getItem('access_token')}` } })
             .then((res) => {
-                console.log(res)
                 if (res.status == true) {
                     toggleShow(res.message);
                 }
@@ -75,9 +74,9 @@ const CategoryModal = ({ showHide, data, onToggle }) => {
                                     </div>
 
                                     <AvField type="select" name="status" label="Market Status">
-                                        <option>Active</option>
-                                        <option>Deactived</option>
-                                        <option>Delete</option>
+                                        <option>Approved</option>
+                                        <option>Pending</option>
+                                        <option>Deactivate</option>
                                     </AvField>
 
 

@@ -29,6 +29,7 @@ const MarketPlace = () => {
           data.forEach((e) => {
             e.edit = <button className="btn btn-danger" onClick={() => toggleModal(true, e)}>Edit</button>;
             e.view = <button className="btn btn-primary" onClick={() => gotoDetail(e)}>View</button>
+            e.status = e.status == '1' ? 'Approved' : e.status == '2'? 'Pending' : 'Deactivated'
           })
           let tableData = { 
             columns: [
