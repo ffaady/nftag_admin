@@ -42,7 +42,7 @@ const ContentPages = ({ match }) => {
 
 
     const getPageContent = (slug) => {
-        post('GetPagedetailsBySlug', { page: slug }, { headers: { "Authorization": `Bearer ${localStorage.getItem('access_token')}` } })
+        post('GetPageDetailBySlug', { page: slug }, { headers: { "Authorization": `Bearer ${localStorage.getItem('access_token')}` } })
             .then((res) => {
                 if (res.status == true) {
                     setEditorState(res.data.page_content);
@@ -110,7 +110,7 @@ const ContentPages = ({ match }) => {
                 </MetaTags>
                 <ToastContainer />
                 <div className="container-fluid">
-                    <Breadcrumbs maintitle="GIG-Economy" title="Terms & Conditions" />
+                    <Breadcrumbs maintitle="NFTAG" title="Terms & Conditions" />
 
                     <Row>
                         <Col>

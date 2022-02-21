@@ -76,7 +76,7 @@ const Users = () => {
           <title>Users </title>
         </MetaTags>
         <div className="container-fluid">
-          <Breadcrumbs maintitle="GIG-Economy" title="Users"  />
+          <Breadcrumbs maintitle="NFTAG" title="Users"  />
 
           <Row>
             <Col className="col-12">

@@ -56,7 +56,7 @@ const UsersProfile = ({ match }) => {
           <title>User Profile </title>
         </MetaTags>
         <div className="container-fluid">
-          <Breadcrumbs maintitle="GIG-Economy" title="User Profile" />
+          <Breadcrumbs maintitle="NFTAG" title="User Profile" />
 
           <Container fluid>
             <ToastContainer />
