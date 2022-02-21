@@ -19,6 +19,8 @@ import UsersProfile from "../pages/UserProfile/UserProfile";
 import MarketPlace from '../pages/MarketPlace/MarketPlace';
 import Collections from '../pages/Collections/Collection';
 import Assets from '../pages/Assets/Assets';
+import ContentPages from "../pages/ContentPages/ContentPages";
+
 
 const userRoutes = [
   { path: "/dashboard", component: Dashboard },
@@ -32,6 +34,7 @@ const userRoutes = [
   { path: "/marketplace", component: MarketPlace },
   { path: "/collections/:id", component: Collections },
   { path: "/assets/:id", component: Assets },
+  { path: "/ContentPages/:slug/:id", component: ContentPages },
 
   // this route should be at the end of all other routes
   { path: "/", exact: true, component: () => <Redirect to="/dashboard" /> },

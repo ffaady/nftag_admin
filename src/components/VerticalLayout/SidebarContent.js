@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useRef, useState } from "react"
 
 // //Import Scrollbar
 import SimpleBar from "simplebar-react"
@@ -11,9 +11,12 @@ import { Link } from "react-router-dom"
 
 //i18n
 import { withTranslation } from "react-i18next"
+import { post } from "helpers/api_helper"
 
 const SidebarContent = props => {
   const ref = useRef()
+  const [pages, setPages] = useState([]);
+
   // Use ComponentDidMount and ComponentDidUpdate method symultaniously
   useEffect(() => {
     const pathName = props.location.pathname
@@ -38,6 +41,7 @@ const SidebarContent = props => {
 
   useEffect(() => {
     ref.current.recalculate()
+    pages.length == 0 ? getPages() : null;
   })
 
   function scrollElement(item) {
@@ -87,6 +91,15 @@ const SidebarContent = props => {
     return false
   }
 
+  const getPages = () => {
+    post('GetAllContentPages', null, { headers: { "Authorization": `Bearer ${localStorage.getItem('access_token')}` } })
+      .then((res) => {
+        if (res.status == true) {
+          setPages(res.data.pages);
+        }
+      })
+  }
+
   return (
     <React.Fragment>
       <SimpleBar style={{ maxHeight: "100%" }} ref={ref}>
@@ -112,6 +125,27 @@ const SidebarContent = props => {
                 <i className="ti-bar-chart"></i>
                 <span>{props.t("Market Place")}</span>
               </Link>
+            </li>
+            
+            <li>
+              <Link to="/#" className="has-arrow waves-effect">
+                <i className="ti-email"></i>
+                <span>{props.t("Content Pages")}</span>
+              </Link>
+              <ul className="sub-menu" aria-expanded="false">
+                {
+                  pages.map((p, i) => {
+                    return (
+                      <li key={i}>
+                        <Link to={`/ContentPages/${p.page_slug}/${p.id}`}>{props.t(p.page_name)}</Link>
+                      </li>
+                    )
+                  })
+                }
+                <li>
+                  <Link to={`/ContentPages/addnew/new`}>{props.t('Add New Page')}</Link>
+                </li>
+              </ul>
             </li>
 
             {/* <li>
